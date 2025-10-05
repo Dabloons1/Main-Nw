@@ -1,0 +1,91 @@
+========================================
+COMMIT GRADLE WRAPPER FIX TO GITHUB
+========================================
+
+The gradle-wrapper.jar is now FIXED locally (61,574 bytes).
+But GitHub Actions is still using the OLD corrupted version!
+
+You MUST commit the fixed JAR file to your repository.
+
+========================================
+METHOD 1: Using GitHub Desktop (Easiest)
+========================================
+
+1. Open GitHub Desktop
+2. You should see "gradle/wrapper/gradle-wrapper.jar" in the changes list
+3. Also see other files like:
+   - .gitattributes
+   - .github/workflows/build-apk.yml
+   - fix_gradle_wrapper.bat
+   - etc.
+
+4. Check ALL the boxes (select all files)
+5. Add commit message: "Fix Gradle wrapper corruption"
+6. Click "Commit to main"
+7. Click "Push origin" button
+
+Done! GitHub Actions will now use the fixed wrapper.
+
+========================================
+METHOD 2: Using Git Command Line
+========================================
+
+If you have Git installed, run these commands:
+
+cd "C:\LSPosed Module Project"
+git add gradle/wrapper/gradle-wrapper.jar
+git add .gitattributes
+git add .github/workflows/build-apk.yml
+git add fix_gradle_wrapper.bat
+git add BUILDING.md
+git add GRADLE_WRAPPER_FIX.md
+git commit -m "Fix Gradle wrapper corruption + add binary file protection"
+git push origin main
+
+========================================
+METHOD 3: Using VS Code
+========================================
+
+1. Open VS Code
+2. Click Source Control icon (left sidebar)
+3. You'll see all changed files
+4. Click "+" next to each file to stage them
+   (Or click "+" next to "Changes" to stage all)
+5. Type commit message: "Fix Gradle wrapper"
+6. Click checkmark to commit
+7. Click "Sync Changes" or "Push" button
+
+========================================
+VERIFICATION
+========================================
+
+After pushing, go to your GitHub repo:
+1. Navigate to: gradle/wrapper/gradle-wrapper.jar
+2. Check file size shows: ~61 KB (or 61,574 bytes)
+3. Go to Actions tab
+4. Trigger a new build (push any change or click "Run workflow")
+5. Build should succeed!
+
+========================================
+IMPORTANT FILES TO COMMIT
+========================================
+
+These files MUST be committed for the fix to work:
+
+✓ gradle/wrapper/gradle-wrapper.jar (FIXED JAR - 61KB)
+✓ .gitattributes (prevents future corruption)
+✓ .github/workflows/build-apk.yml (updated actions)
+✓ fix_gradle_wrapper.bat (helper script)
+✓ BUILDING.md (updated docs)
+
+========================================
+QUICK TEST
+========================================
+
+Before committing, verify locally:
+.\gradlew.bat --version
+
+Should show: Gradle 7.6 ✓
+
+========================================
+

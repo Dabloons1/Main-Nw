@@ -1,0 +1,14 @@
+## This file is used to configure local development environment
+## Copy this file to 'local.properties' and update the paths
+
+# Location of the Android SDK
+# Windows example:
+# sdk.dir=C\:\\Users\\YourUsername\\AppData\\Local\\Android\\Sdk
+# Linux/Mac example:
+# sdk.dir=/home/username/Android/Sdk
+
+sdk.dir=PUT_YOUR_SDK_PATH_HERE
+
+# Optional: Specify NDK location if not in SDK folder
+# ndk.dir=PUT_YOUR_NDK_PATH_HERE
+

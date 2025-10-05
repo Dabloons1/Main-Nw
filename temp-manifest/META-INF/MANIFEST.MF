@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Implementation-Title: Gradle Wrapper
+Implementation-Version: 7.6
+Main-Class: org.gradle.wrapper.GradleWrapperMain

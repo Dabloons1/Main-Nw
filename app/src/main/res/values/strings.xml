@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Shaizuro MODMENU</string>
+    <string name="module_description">Xposed by @shaizuroid | package : com.com2usholdings.soulstrike.android.google.global.normal</string>
+    
+    <!-- LSPosed scope configuration -->
+    <string-array name="xposed_scope">
+        <item>com.com2usholdings.soulstrike.android.google.global.normal</item>
+    </string-array>
+</resources>
